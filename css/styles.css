@@ -1,0 +1,136 @@
+:root {
+    --bg: linear-gradient(135deg, #1a1a2e, #16213e);
+    --card-bg: rgba(30, 35, 60, 0.75);
+    --display-bg: #0f0f1a;
+    --btn-bg: rgba(50, 60, 100, 0.6);
+    --btn-hover: rgba(80, 90, 150, 0.8);
+    --operator-bg: #ff6b6b;
+    --operator-hover: #ff5252;
+    --equal-bg: #4ecdc4;
+    --equal-hover: #45b7aa;
+    --clear-bg: #556;
+    --clear-hover: #778;
+    --text: #e0e0ff;
+    --display-text: #a0f7d8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text);
+}
+
+.calculator {
+    width: 500px;
+    padding: 30px 25px;
+    background: var(--card-bg);
+    backdrop-filter: blur(15px);
+    border-radius: 28px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+        inset 0 0 30px rgba(100, 150, 255, 0.1);
+    border: 1px solid rgba(100, 180, 255, 0.2);
+}
+
+h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #4ecdc4, #6c5ce7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.display {
+    width: 100%;
+    height: 80px;
+    padding: 0 20px;
+    margin-bottom: 25px;
+    font-size: 2.4rem;
+    text-align: right;
+    background: var(--display-bg);
+    color: var(--display-text);
+    border: none;
+    border-radius: 16px;
+    box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+button {
+    height: 68px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+.number,
+.decimal {
+    background: var(--btn-bg);
+    color: #e0e0ff;
+}
+
+.number:hover,
+.decimal:hover {
+    background: var(--btn-hover);
+}
+
+.operator {
+    background: var(--operator-bg);
+    color: white;
+    font-size: 1.8rem;
+}
+
+.operator:hover {
+    background: var(--operator-hover);
+}
+
+.clear {
+    background: var(--clear-bg);
+    color: #fff;
+    grid-column: span 2;
+}
+
+.clear:hover {
+    background: var(--clear-hover);
+}
+
+.equal {
+    background: var(--equal-bg);
+    color: white;
+    font-size: 2rem;
+    grid-column: span 2;
+}
+
+.equal:hover {
+    background: var(--equal-hover);
+}
+
+.zero {
+    grid-column: span 2;
+}

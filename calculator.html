@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="calculator">
+        <h3>Calculator</h3>
+        
+        <input type="text" id="display" class="display" readonly>
+
+        <div class="buttons">
+            <button class="clear" onclick="clearScreen()">Clear</button>
+            <button class="operator" onclick="displayUserInput(' / ')">÷</button>
+            <button class="operator" onclick="displayUserInput(' * ')">×</button>
+
+            <button class="number" onclick="displayUserInput('7')">7</button>
+            <button class="number" onclick="displayUserInput('8')">8</button>
+            <button class="number" onclick="displayUserInput('9')">9</button>
+            <button class="operator" onclick="displayUserInput(' - ')">−</button>
+
+            <button class="number" onclick="displayUserInput('4')">4</button>
+            <button class="number" onclick="displayUserInput('5')">5</button>
+            <button class="number" onclick="displayUserInput('6')">6</button>
+            <button class="operator" onclick="displayUserInput(' + ')">+</button>
+
+            <button class="number" onclick="displayUserInput('1')">1</button>
+            <button class="number" onclick="displayUserInput('2')">2</button>
+            <button class="number" onclick="displayUserInput('3')">3</button>
+            <button class="decimal" onclick="displayUserInput('.')">.</button>
+            
+            <button class="equal" rowspan="2" onclick="calculate()">=</button>
+
+            <button class="number zero" onclick="displayUserInput('0')">0</button>
+        </div>
+    </div>
+    <script src="/js/calculator.js"></script>
+</body>
+
+</html>
